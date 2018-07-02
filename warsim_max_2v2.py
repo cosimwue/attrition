@@ -5,7 +5,7 @@ Created on Mon July 02 09:06:15 2018
 @author: RBabl
 
 Simulates the course of a battle after Osipov's example.
-Uses amount and power of each unit for both sides (currently maximum of two different nits per side)
+Uses amount and power of each unit for both sides (currently maximum of two different units per side)
 to generate a probability of death for each unit, then rolls using possible coefficients to determine the outcome. 
 Repeats per given time unit, or until one side has 0 units left.  
 
