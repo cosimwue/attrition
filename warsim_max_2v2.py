@@ -61,8 +61,7 @@ def warsim(size_r1, power_r1, size_b1, power_b1, time, coeff_r1 = 0, coeff_b1 = 
                     of a unit of the second part of side b (maximum = 1, default = 0)."""
                     
     if coeff_r1 or coeff_b1 or coeff_r2 or coeff_b2 > 1:
-        print("Coefficient cannot be > 1, please select a smaller value")
-        raise SystemExit
+        raise SystemExit("Coefficient cannot be > 1, please select a smaller value")
     r = size_r1 + size_r2
     b = size_b1 + size_b2
     
