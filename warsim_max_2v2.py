@@ -91,11 +91,11 @@ def warsim(size_r1, power_r1, size_b1, power_b1, time, coeff_r1 = 0, coeff_b1 = 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=DESCRIPTION)
 
-    parser.add_argument("--size-r1", type=int, help="Describes the size of the first part of the units on side r.")
-    parser.add_argument("--power-r1", type=int, help="Describes the power of the first part of the units on side r.")
-    parser.add_argument("--size-b1", type=int, help="Describes the size of the first part of the units on side b.")
-    parser.add_argument("--power-b1", type=int, help="Describes the power of the first part of the units on side b.")
-    parser.add_argument("--time", type=int, help="Describes the amount of battle rounds/time units.")
+    parser.add_argument("--size-r1", type=int, help="Describes the size of the first part of the units on side r.", required=True)
+    parser.add_argument("--power-r1", type=int, help="Describes the power of the first part of the units on side r.", required=True)
+    parser.add_argument("--size-b1", type=int, help="Describes the size of the first part of the units on side b.", required=True)
+    parser.add_argument("--power-b1", type=int, help="Describes the power of the first part of the units on side b.", required=True)
+    parser.add_argument("--time", type=int, help="Describes the amount of battle rounds/time units.", required=True)
     parser.add_argument("--coeff-r1", type=float, default=.0, help="Describes bonus/malus (armour, training, position) of a unit of the first part of side r (maximum = 1, default = 0).")
     parser.add_argument("--coeff-b1", type=float, default=.0, help="Describes bonus/malus (armour, training, position) of a unit of the first part of side r (maximum = 1, default = 0).")
     parser.add_argument("--size-r2", type=int, default=0, help="Describes the size of the second part of the units on side r (default = 0).")
