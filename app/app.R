@@ -35,20 +35,20 @@ warsim <- function(size.r1, power.r1, size.b1, power.b1, time, coeff.r1, coeff.b
   #' Simulates a battle of two sides, current maximum of 2 different units a side.
   #' 
   #' size_r1: int used to describe the size of the first part of the units on side r.
-  #' power_r1: int used to describe the power of the first part of the units on side r.
+  #' power_r1: float used to describe the power of the first part of the units on side r.
   #' size_b1: int used to describe the size of the first part of the units on side b.
-  #' power_b1: int used to describe the power of the first part of the units on side b.
+  #' power_b1: float used to describe the power of the first part of the units on side b.
   #' time: int used to describe the amount of battle rounds/time units.
   #' coeff_r1: float used to describe bonus/malus (armour, training, position)
   #'   of a unit of the first part of side r (maximum = 1).
   #' coeff_b1: float used to describe bonus/malus (armour, training, position)
   #'   of a unit of the first part of side b (maximum = 1).
   #' size_r2: int used to describe the size of the second part of the units on side r (default = 0). 
-  #' power_r2: int used to describe the power of the second part of the units on side r (default = 0). 
+  #' power_r2: float used to describe the power of the second part of the units on side r (default = 0). 
   #' coeff_r2: float used to describe bonus/malus (armour, training, position)
   #'   of a unit of the second part of side r (maximum = 1).
   #' size_b2: int used to describe the size of the second part of the units on side b (default = 0). 
-  #' power_b2: int used to describe the power of the second part of the units on side b (default = 0). 
+  #' power_b2: float used to describe the power of the second part of the units on side b (default = 0). 
   #' coeff_b2: float used to describe bonus/malus (armour, training, position)
   #'   of a unit of the second part of side b (maximum = 1).
   if (coeff.r1 > 1 | coeff.b1 > 1 | coeff.r2 > 1 | coeff.b2 > 1) {
