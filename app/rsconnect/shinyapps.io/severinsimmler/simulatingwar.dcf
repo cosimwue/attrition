@@ -5,8 +5,8 @@ account: severinsimmler
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 376514
-bundleId: 1470718
+bundleId: 1482196
 url: https://severinsimmler.shinyapps.io/simulatingwar/
-when: 1531099459.92638
+when: 1531733874.58919
 asMultiple: FALSE
 asStatic: FALSE
