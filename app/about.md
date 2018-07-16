@@ -1,0 +1,1 @@
+Hier könnte noch etwas informatives über Konfliktsimulation stehen.
