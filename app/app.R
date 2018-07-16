@@ -108,6 +108,7 @@ osipov <- function(time, size.r, power.r, coeff.r, size.b1, power.b1, coeff.b1, 
 }
 
 plot.simulation <- function(df) {
+  #' Plots the model output
   p <- ggplot(df, aes(x=t, y=value, color=variable))
   p <- p + theme(text = element_text(size=16))
   p <- p + geom_line()
