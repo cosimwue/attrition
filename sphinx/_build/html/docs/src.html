@@ -1,0 +1,188 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>src package &#8212; Attrition Warfare  documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Attrition Warfare  documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="src-package">
+<h1>src package<a class="headerlink" href="#src-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-src.deterministic_model">
+<span id="src-deterministic-model-module"></span><h2>src.deterministic_model module<a class="headerlink" href="#module-src.deterministic_model" title="Permalink to this headline">¶</a></h2>
+<p>Simulates the course of a battle after Lanchesters Law, a deterministic model
+for the losses in combat situations under certain conditions</p>
+<dl class="function">
+<dt id="src.deterministic_model.square_law">
+<code class="descclassname">src.deterministic_model.</code><code class="descname">square_law</code><span class="sig-paren">(</span><em>r</em>, <em>b</em>, <em>t</em>, <em>a</em>, <em>c</em><span class="sig-paren">)</span><a class="headerlink" href="#src.deterministic_model.square_law" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simulates a battle of two sides, current maximum of 2 different units a side.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">r (int) – size of unit r at the beginning of the battle</p>
+<p>b (int) – size of unit b at the beginning of the battle</p>
+<p>t (int) – number of timeunits</p>
+<p>a (int) – describe bonus/malus (armour, training, position) of unit r</p>
+<p class="last">c (int) – describe bonus/malus (armour, training, position) of unit b</p>
+</dd>
+<dt>Returns:</dt>
+<dd>r,b (int) – size of r unit, size of b unit (after the battle)</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.warsim_max_2v2">
+<span id="src-warsim-max-2v2-module"></span><h2>src.warsim_max_2v2 module<a class="headerlink" href="#module-src.warsim_max_2v2" title="Permalink to this headline">¶</a></h2>
+<p>Simulates the course of a battle after Osipov’s example. 
+Uses amount and power of each unit for both sides (currently maximum of two different units per side) 
+to generate a probability of death for each unit, then rolls using possible coefficients to determine the outcome. 
+Repeats per given time unit, or until one side has 0 units left.</p>
+<dl class="function">
+<dt id="src.warsim_max_2v2.battle">
+<code class="descclassname">src.warsim_max_2v2.</code><code class="descname">battle</code><span class="sig-paren">(</span><em>size</em>, <em>coeff</em>, <em>prob</em><span class="sig-paren">)</span><a class="headerlink" href="#src.warsim_max_2v2.battle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Uses a randomized roll for every unit do determine whether it dies or not.</p>
+<dl class="docutils">
+<dt>Args: </dt>
+<dd><p class="first">size (int) – describes the number of units taking fire</p>
+<p>coeff (float) – describes a special bonus/malus (armour, position, training) for a unit</p>
+<p class="last">prob (float) – describes the probability of death for a unit</p>
+</dd>
+<dt>Returns: </dt>
+<dd>newsize (int) – new number of units taking fire</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="src.warsim_max_2v2.prob">
+<code class="descclassname">src.warsim_max_2v2.</code><code class="descname">prob</code><span class="sig-paren">(</span><em>size_def</em>, <em>size_one</em>, <em>power_one</em>, <em>size_two=0</em>, <em>power_two=0</em><span class="sig-paren">)</span><a class="headerlink" href="#src.warsim_max_2v2.prob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates the probability for an individual unit to succumb to enemy fire</p>
+<dl class="docutils">
+<dt>Args: </dt>
+<dd><p class="first">size_def (int) – describes the number of units taking fire</p>
+<p>size_one (int) – describes the number units firing</p>
+<p>size_two (int) – describes the number units firing, optional argument, default = 0</p>
+<p>power_one (int) – describes the power of units firing</p>
+<p class="last">power_two (int) – describes the power of units firing, optional argument, default = 0</p>
+</dd>
+<dt>Returns:</dt>
+<dd>deathprob (int) – death probability</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="src.warsim_max_2v2.warsim">
+<code class="descclassname">src.warsim_max_2v2.</code><code class="descname">warsim</code><span class="sig-paren">(</span><em>size_r1</em>, <em>power_r1</em>, <em>size_b1</em>, <em>power_b1</em>, <em>time</em>, <em>coeff_r1=0</em>, <em>coeff_b1=0</em>, <em>size_r2=0</em>, <em>power_r2=0</em>, <em>coeff_r2=0</em>, <em>size_b2=0</em>, <em>power_b2=0</em>, <em>coeff_b2=0</em><span class="sig-paren">)</span><a class="headerlink" href="#src.warsim_max_2v2.warsim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simulates a Battle of two sides, current maximum of 2 different units a side.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">size_r1 (int) – used to describe the size of the first part of the units on side r.</p>
+<p>power_r1 (float) – used to describe the power of the first part of the units on side r.</p>
+<p>size_b1 (int) – used to describe the size of the first part of the units on side b.</p>
+<p>power_b1 (float) – used to describe the power of the first part of the units on side b.</p>
+<p>time (int) – used to describe the amount of battle rounds/time units.</p>
+<p>coeff_r1 (float) – used to describe bonus/malus (armour, training, position) of a unit of the first part of side r (maximum = 1, default = 0).</p>
+<p>coeff_b1 (float) – used to describe bonus/malus (armour, training, position) of a unit of the first part of side b (maximum = 1, default = 0).</p>
+<p>size_r2 (int) – used to describe the size of the second part of the units on side r (default = 0).</p>
+<p>power_r2 (float) – used to describe the power of the second part of the units on side r (default = 0).</p>
+<p>coeff_r2 (float) – used to describe bonus/malus (armour, training, position) of a unit of the second part of side r (maximum = 1, default = 0).</p>
+<p>size_b2 (int) – used to describe the size of the second part of the units on side b (default = 0).</p>
+<p>power_b2 (float) – used to describe the power of the second part of the units on side b (default = 0).</p>
+<p class="last">coeff_b2 (float) – used to describe bonus/malus (armour, training, position) of a unit of the second part of side b (maximum = 1, default = 0).</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-src">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">src package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-src.deterministic_model">src.deterministic_model module</a></li>
+<li><a class="reference internal" href="#module-src.warsim_max_2v2">src.warsim_max_2v2 module</a></li>
+<li><a class="reference internal" href="#module-src">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/docs/src.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Attrition Warfare  documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, -.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.4.
+    </div>
+  </body>
+</html>

@@ -1,1 +1,3 @@
 *.Rhistory
+src/__pycache__
+tutorials/.ipynb_checkpoints
