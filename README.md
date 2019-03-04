@@ -2,7 +2,7 @@
 
 The attrition warfare project comes up with a bunch of methods for simulating the mathematical 
 aspects of attrition warfare. This project has been started in summer semester 18 by the participants 
-of the conflict simulation course at the Univerity of Wuerzburg.
+of the conflict simulation course at the University of Wuerzburg.
 
 ### Documentation
 
