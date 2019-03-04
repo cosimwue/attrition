@@ -4,18 +4,18 @@ src package
 Submodules
 ----------
 
-src.deterministic\_model module
--------------------------------
+src.warsim\_lanchester\_model module
+------------------------------------
 
-.. automodule:: src.deterministic_model
+.. automodule:: src.warsim_lanchester_model
     :members:
     :undoc-members:
     :show-inheritance:
 
-src.warsim\_max\_2v2 module
----------------------------
+src.warsim\_osipov\_model module
+--------------------------------
 
-.. automodule:: src.warsim_max_2v2
+.. automodule:: src.warsim_osipov_model
     :members:
     :undoc-members:
     :show-inheritance:
