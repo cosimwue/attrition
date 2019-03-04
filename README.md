@@ -30,12 +30,12 @@ or until one side has 0 units left.
 ```
 $ python warsim_osipov_model.py --help
 usage: warsim_osipov_model.py [-h] [--size-r1 SIZE_R1] [--power-r1 POWER_R1]
-                         [--size-b1 SIZE_B1] [--power-b1 POWER_B1]
-                         [--time TIME] [--coeff-r1 COEFF_R1]
-                         [--coeff-b1 COEFF_B1] [--size-r2 SIZE_R2]
-                         [--power-r2 POWER_R2] [--coeff-r2 COEFF_R2]
-                         [--size-b2 SIZE_B2] [--power-b2 POWER_B2]
-                         [--coeff-b2 COEFF_B2]
+                              [--size-b1 SIZE_B1] [--power-b1 POWER_B1]
+                              [--time TIME] [--coeff-r1 COEFF_R1]
+                              [--coeff-b1 COEFF_B1] [--size-r2 SIZE_R2]
+                              [--power-r2 POWER_R2] [--coeff-r2 COEFF_R2]
+                              [--size-b2 SIZE_B2] [--power-b2 POWER_B2]
+                              [--coeff-b2 COEFF_B2]
 
 
 optional arguments:
@@ -81,8 +81,8 @@ for the losses in combat situations under certain conditions.
 ```                                        
 $ python warsim_lanchester_model.py --help
 usage: warsim_lanchester_model.py [-h] [--size-r SIZE_R] [--size-b SIZE_B]
-                              [--time TIME] [--power-r POWER_R] 
-                              [--power-b POWER_B]
+                                  [--time TIME] [--power-r POWER_R] 
+                                  [--power-b POWER_B]
                               
 
 
