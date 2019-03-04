@@ -32,3 +32,17 @@ def square_law(r, b, t, a, c):
         if r <= 0 or b <= 0:
             break
     return r, b
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=DESCRIPTION)
+
+    parser.add_argument("--size-r", type=int, help="Describes the size of the first part of the units on side r.", required=True)
+    parser.add_argument("--size-b", type=int, help="Describes the size of the first part of the units on side b.", required=True)
+    parser.add_argument("--time", type=int, help="Describes the amount of battle rounds/time units.", required=True)
+    parser.add_argument("--power-r", type=float, help="Describes the power of the first part of the units on side r.", required=True)
+    parser.add_argument("--power-b", type=float, help="Describes the power of the first part of the units on side b.", required=True)
+    
+    args = parser.parse_args()
+
+    square_law(args.size_r, args.size_b, args.time, args.power_r, args.power_b)
