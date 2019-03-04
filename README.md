@@ -47,4 +47,26 @@ optional arguments:
   --coeff-b2 COEFF_B2  Describes bonus/malus (armour, training, position) of a
                        unit of the second part of side b (maximum = 1, default
                        = 0).
+                       
+                       
+$ python deterministic_model.py --help
+usage: deterministic_model.py [-h] [--size-r SIZE_R] [--size-b SIZE_B]
+                              [--time TIME] [--power-r POWER_R] 
+                              [--power-b POWER_B]
+                              
+Simulates the course of a battle after Lanchesters Law, a deterministic model
+for the losses in combat situations under certain conditions.
+
+optional arguments:
+  -h, --help         show this help message and exit
+  --size-r SIZE_R    Describes the size of the first part of the units on
+                     side r.
+  --size-b SIZE_B    Describes the size of the first part of the units on
+                     side b.
+  --time TIME        Describes the amount of battle rounds/time units.
+  --power-r POWER_R  Describes the power of the first part of the units on
+                     side r.
+  --power-b1 POWER_B Describes the power of the first part of the units on
+                     side b.
+                       
 ```
